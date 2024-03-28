@@ -1,3 +1,3 @@
 # Blog 
 
-Blog criado utilizando django.
+Blog criado utilizando django..
