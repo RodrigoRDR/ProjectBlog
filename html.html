@@ -1,0 +1,31 @@
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod autem meum munus dicis non equidem recuso, sed te
+    adiungo socium. Hoc sic expositum dissimile est superiori. Philosophi autem in suis lectulis plerumque moriuntur. Ut
+    pulsi recurrant? <i>Quod quidem nobis non saepe contingit.</i> Alterum significari idem, ut si diceretur, officia
+    media omnia aut pleraque servantem vivere. Duo Reges: constructio interrete. <i>Quis hoc dicit?</i> </p>
+
+<p>Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Summae mihi videtur inscitiae.
+    Duarum enim vitarum nobis erunt instituta capienda. <a href="http://loripsum.net/" target="_blank">Haec quo modo
+        conveniant, non sane intellego.</a> <b>Nunc omni virtuti vitium contrario nomine opponitur.</b> Et ille ridens:
+    Video, inquit, quid agas; <b>Numquam facies.</b> Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P.
+    Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. </p>
+
+<pre>def category(request, slug):
+    posts = Post.objects.get_published().filter(category__slug=slug)
+
+    paginator = Paginator(posts, PER_PAGE)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
+    return render(
+        request,
+        'blog/pages/index.html',
+        {
+            'page_obj': page_obj,
+        }
+    )</pre>
+
+<p>Sextilio Rufo, cum is rem ad amicos ita deferret, se esse heredem Q. Audeo dicere, inquit. Innumerabilia dici possunt
+    in hanc sententiam, sed non necesse est. Tu autem, si tibi illa probabantur, cur non propriis verbis ea tenebas? His
+    singulis copiose responderi solet, sed quae perspicua sunt longa esse non debent. Nec vero alia sunt quaerenda
+    contra Carneadeam illam sententiam. Re mihi non aeque satisfacit, et quidem locis pluribus. Inquit, dasne
+    adolescenti veniam? Callipho ad virtutem nihil adiunxit nisi voluptatem, Diodorus vacuitatem doloris. </p>
